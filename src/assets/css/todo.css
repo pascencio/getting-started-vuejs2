@@ -1,0 +1,35 @@
+body {
+  font-family: "Aileron-Regular";
+  color: #35495E;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Aileron-Heavy";
+  color: #41B883;
+}
+
+.jumbotron {
+ background-image: url(../banner.jpg);
+ color: #ffffff;
+}
+
+.jumbotron h1 {
+ font-family: "Aileron-Black";
+}
+
+.jumbotron p {
+ font-family: "Aileron-Heavy";
+}
+
+.tools {
+ display: flex;
+ flex-flow: row;
+ justify-content: flex-end;
+ position: relative;
+ top: 47px;
+ background-color: rgba(0,0,0,0.6);
+}
+.tools > div {
+ padding: 1em;
+ font-family: "Aileron-Bold";
+}

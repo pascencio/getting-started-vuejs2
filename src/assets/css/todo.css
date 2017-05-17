@@ -42,11 +42,13 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
   padding-bottom: 5px;
-  border-bottom: solid 2px #7a7a7a;
+  border-bottom: solid 2px #35495E;
 }
 
 .panel-duedate {
-  border-color: #2a9f6b;
+  border-color: #41B883;
+  border-width: 2px;
+  font-size: 14pt;
 }
 
 .panel-duedate > .panel-heading {
@@ -56,19 +58,23 @@ h1 {
 }
 
 .panel-task {
-  border-color: #2a9f6b;
+  border-color: #41B883;
+  border-width: 2px;
 }
 
 .panel-task > .panel-heading {
   font-family: "Aileron-Heavy";
-  color: #2a9f6b;
   font-size: 16pt;
+}
+
+.panel-task > .panel-heading > a {
+  float: right;
+  color: #41B883;
 }
 
 .panel-task > .panel-footer {
   font-family: "Aileron-Heavy";
   background-color: transparent;
-  color: #7a7a7a;
   text-align: right;
   font-size: 12pt;
 }
@@ -81,13 +87,40 @@ h1 {
   display: inline-block;
 }
 
+.panel-footer > ul > li > a {
+  color: #41B883;
+}
+
 .pager li > a:focus, .pager li > a:hover {
     text-decoration: none;
     background-color: #50d99c;
+    border-color: #50d99c;
 }
 
 .pager li > a {
   background-color: #41B883;
   color: #ffffff;
-  border-color: #2a9f6b;
+  border-color: #41B883;
+}
+
+.btn-circle:hover, .btn-circle:focus {
+  background-color: #50d99c;
+  color: #ffffff;
+}
+
+.btn-circle {
+  z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  font-size: 15pt;
+	width: 50px;
+	height: 50px;
+  background-color: #41B883;
+  color: #ffffff;
+}
+
+.btn-circle > ul {
+  display: none;
 }

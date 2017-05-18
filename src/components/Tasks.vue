@@ -6,46 +6,88 @@
       <div class="panel-heading"><i class="fa fa-calendar" aria-hidden="true"></i> Call To Mom <a href="#"><i class="fa fa-edit"></i></a></div>
       <div class="panel-body" v-html="taskCode"></div>
       <div class="panel-footer">
-        <ul>
-          <li>
-            <a href="#">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-star-o" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>
+        <div class="row">
+          <div class="tags col-md-9 text-left">
+            <ul>
+              <li>
+                <i class="fa fa-tags" aria-hidden="true"></i>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge">Homeworks</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge">Bored</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="info col-md-3">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div class="panel panel-task">
       <div class="panel-heading"><i class="fa fa-calendar" aria-hidden="true"></i> Buy Milk <a href="#"><i class="fa fa-edit"></i></a></div>
       <div class="panel-body" v-html="taskCode"></div>
       <div class="panel-footer">
-        <ul>
-          <li>
-            <a href="#">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-star-o" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>
+        <div class="row">
+          <div class="tags col-md-9 text-left">
+            <ul>
+              <li>
+                <i class="fa fa-tags" aria-hidden="true"></i>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge">Homeworks</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge">Bored</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="info col-md-3">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div class="panel panel-task">
@@ -53,23 +95,44 @@
       <div class="panel-body" v-html="taskCode">
       </div>
       <div class="panel-footer">
-        <ul>
-          <li>
-            <a href="#">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-star-o" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
-            </a>
-          </li>
-        </ul>
+        <div class="row">
+          <div class="tags col-md-9 text-left">
+            <ul>
+              <li>
+                <i class="fa fa-tags" aria-hidden="true"></i>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge">Homeworks</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="badge">Bored</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="info col-md-3">
+            <ul>
+              <li>
+                <a href="#">
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-star-o" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <i class="fa fa-calendar-check-o" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -79,12 +142,10 @@
   </ul>
   <div id="editTask" class="modal fade" role="dialog">
   <div class="modal-dialog">
-
-    <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Call To Mom</h4>
+        <h4 class="modal-title"><i class="fa fa-sticky-note" aria-hidden="true"></i> New Task</h4>
       </div>
       <div class="modal-body">
         <div class="form-group">
@@ -95,10 +156,10 @@
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
     </div>
-
   </div>
 </div>
 </div>

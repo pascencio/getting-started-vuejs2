@@ -149,10 +149,14 @@
       </div>
       <div class="modal-body">
         <div class="form-group">
-          <input type="text" class="form-control" id="title" placeholder="Ingrese el titulo de la tarea" name="title">
+          <input type="text" class="form-control" id="title" placeholder="Task title" name="title">
         </div>
         <div class="form-group">
-          <textarea class="form-control" rows="5" placeholder="Describa la tarea que debe realizar"></textarea>
+          <datepicker format="dd-MM-yyyy" placeholder="Task due date"></datepicker>
+          <!-- <input type="text" class="form-control date" id="dueDate" placeholder="Task due date" name="dueDate"> -->
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" rows="3" placeholder="Task description"></textarea>
         </div>
       </div>
       <div class="modal-footer">
@@ -167,12 +171,16 @@
 
 <script>
 import {markdown} from 'markdown';
+import Datepicker from 'vuejs-datepicker';
 
 export default {
   data(){
     return {
       taskDescription:"##Lorem ipsum dolor sit amet\n **Consectetuer adipiscing elit. Aenean commodo ligula eget dolor**. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. *Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate*."
     }
+  },
+  components: {
+    Datepicker
   },
   computed:{
     taskCode(){

@@ -9,6 +9,6 @@ class Todo extends Model {
 export default new Todo({
   version:1,
   schema: {
-    
+
   }
 });

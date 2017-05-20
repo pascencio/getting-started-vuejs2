@@ -28,7 +28,8 @@ h1,h2,h3,h4,h5,h6 {
  justify-content: flex-end;
  position: relative;
  top: 47px;
- background-color: rgba(0,0,0,0.6);
+ background-color: rgba(0,0,0,0.7);
+ box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
 .tools > div {
  padding: 1em;
@@ -38,6 +39,14 @@ h1,h2,h3,h4,h5,h6 {
 .tools > div > span.badge {
   color: #000000;
   background-color: #ffffff;
+}
+
+.tools.fixed {
+  z-index: 1000;
+  position:fixed;
+  top:0;
+  right:0;
+  width: 100%;
 }
 
 h1 {
@@ -203,4 +212,37 @@ h1 {
 
 .modal-content > .modal-header, .modal-content > .modal-footer {
   border: 0px;
+}
+
+.form-group >.vdp-datepicker > div > input::placeholder {
+  color: #999;
+  opacity: 1;
+  background-color: #fff;
+}
+
+.form-group >.vdp-datepicker > div > input {
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  padding: 6px 12px;
+}
+
+.form-control,.form-group >.vdp-datepicker > div > input {
+  border-radius: 0px;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.form-control:focus, .form-group >.vdp-datepicker > div > input:focus {
+  box-shadow: inset 0px 0px 0px;
+  -webkit-box-shadow: inset 0px 0px 0px;
+  border-bottom: 2px solid #41B883;
+}
+
+.form-control:focus::placeholder, .form-group >.vdp-datepicker > div > input:focus::placeholder {
+  color: #41B883;
 }

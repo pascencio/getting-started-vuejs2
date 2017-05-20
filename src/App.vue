@@ -45,7 +45,7 @@
     </button>
     <ul class="options">
       <li>
-        <a href="https://github.com/pascencio" target="_blank" class="btn btn-option github">
+        <a href="https://github.com/pascencio/getting-started-vuejs2" target="_blank" class="btn btn-option github">
           <i class="fa fa-github" aria-hidden="true"></i>
         </a>
       </li>
@@ -79,6 +79,8 @@ const BTN_OPTION_CSS_SELECTOR = '.btn-option';
 const BTN_CIRCLE_CSS_SELECTOR = '.btn-circle';
 const GEAR_ID_SELECTOR = '#gear';
 const ROTATE_CCS_CLASS = 'rotate';
+const DIV_TOOL_CSS_SELECTOR = '.tools';
+const DIV_JUMBOTRON_CSS_SELECTOR = '.jumbotron';
 
 export default {
   name: 'app',
@@ -88,17 +90,27 @@ export default {
     }
   },
   mounted() {
-    function rotateGear(){
+    function rotateGear() {
       let option = $(OPTION_CSS_SELECTOR);
       let gear = $(GEAR_ID_SELECTOR);
       gear.toggleClass('rotate');
       option.slideToggle('fast');
     }
-    $(BTN_OPTION_CSS_SELECTOR).click(()=>{
+    $(BTN_OPTION_CSS_SELECTOR).click(() => {
       rotateGear();
     });
     $(BTN_CIRCLE_CSS_SELECTOR).click(() => {
       rotateGear();
+    });
+    let jumbotronHeight = $(DIV_JUMBOTRON_CSS_SELECTOR).height();
+    logger.debug('Jumbotron height: ',jumbotronHeight);
+    $(window).scroll(() => {
+      let windowScrollTop = $(window).scrollTop();
+      if (windowScrollTop >= jumbotronHeight) {
+        $(DIV_TOOL_CSS_SELECTOR).addClass('fixed');
+      } else if ($(DIV_TOOL_CSS_SELECTOR).hasClass('fixed')) {
+        $(DIV_TOOL_CSS_SELECTOR).removeClass('fixed');
+      }
     });
   }
 }

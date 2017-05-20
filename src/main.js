@@ -6,7 +6,6 @@ import VueRouter from 'vue-router';
 import App from './App.vue';
 
 logger.setLevel("DEBUG");
-
 Vue.use(VueRouter);
 
 new Vue({

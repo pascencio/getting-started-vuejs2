@@ -214,16 +214,56 @@ h1 {
   border: 0px;
 }
 
-.form-group >.vdp-datepicker > div > input::placeholder {
+.form-group >.vdp-datepicker > div > input::placeholder, .form-group > .vue-input-tag-wrapper .new-tag::placeholder {
   color: #999;
   opacity: 1;
   background-color: #fff;
 }
 
-.form-group >.vdp-datepicker > div > input {
+.form-group > .vdp-datepicker > div > input {
   width: 100%;
   border-bottom: 1px solid #ccc;
   padding: 6px 12px;
+}
+
+.form-group > .vue-input-tag-wrapper {
+  border: 0px;
+  padding: 0px;
+}
+
+.form-group > .vue-input-tag-wrapper .new-tag {
+  font-size: inherit !important;
+  font-family: inherit !important;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+.vue-input-tag-wrapper .input-tag {
+  color: #fff !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  background-color: #41B883 !important;
+  border-radius: 3px !important;
+  font-weight: inherit !important;
+  padding: 5px !important;
+  border: 0px !important;
+}
+
+.vue-input-tag-wrapper .input-tag .remove::before {
+  font-size: inherit !important;
+  font-family: inherit !important;
+  color: #fff !important;
+  padding-left: 2px;
+}
+
+.form-group > .vue-input-tag-wrapper {
+  width: 100%;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-bottom: 1px solid #ccc !important;
+  padding: 6px 12px !important;
 }
 
 .form-control,.form-group >.vdp-datepicker > div > input {
@@ -237,12 +277,16 @@ textarea.form-control {
   resize: none;
 }
 
-.form-control:focus, .form-group >.vdp-datepicker > div > input:focus {
+.form-control:focus, .form-group >.vdp-datepicker > div > input:focus, .form-group > .vue-input-tag-wrapper.focus {
   box-shadow: inset 0px 0px 0px;
   -webkit-box-shadow: inset 0px 0px 0px;
-  border-bottom: 2px solid #41B883;
+  border-bottom: 2px solid #41B883 !important;
 }
 
-.form-control:focus::placeholder, .form-group >.vdp-datepicker > div > input:focus::placeholder {
+.form-group > .vue-input-tag-wrapper .new-tag:focus {
+  background-color: #fff;
+}
+
+.form-control:focus::placeholder, .form-group >.vdp-datepicker > div > input:focus::placeholder, .form-group > .vue-input-tag-wrapper .new-tag:focus::placeholder {
   color: #41B883;
 }

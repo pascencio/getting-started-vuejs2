@@ -102,6 +102,14 @@ export default {
     $(BTN_CIRCLE_CSS_SELECTOR).click(() => {
       rotateGear();
     });
+    $('.form-group > .vue-input-tag-wrapper .new-tag')
+    .focusin(()=>{
+      $('.form-group > .vue-input-tag-wrapper').addClass('focus');
+    });
+    $('.form-group > .vue-input-tag-wrapper .new-tag')
+    .focusout(()=>{
+      $('.form-group > .vue-input-tag-wrapper').removeClass('focus');
+    });
     let jumbotronHeight = $(DIV_JUMBOTRON_CSS_SELECTOR).height();
     logger.debug('Jumbotron height: ',jumbotronHeight);
     $(window).scroll(() => {

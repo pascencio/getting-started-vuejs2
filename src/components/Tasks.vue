@@ -153,7 +153,9 @@
         </div>
         <div class="form-group">
           <datepicker format="dd-MM-yyyy" placeholder="Task due date"></datepicker>
-          <!-- <input type="text" class="form-control date" id="dueDate" placeholder="Task due date" name="dueDate"> -->
+        </div>
+        <div class="form-group">
+          <input-tag :tags="tags" placeholder="Task's tags "></input-tag>
         </div>
         <div class="form-group">
           <textarea class="form-control" rows="3" placeholder="Task description"></textarea>
@@ -172,15 +174,18 @@
 <script>
 import {markdown} from 'markdown';
 import Datepicker from 'vuejs-datepicker';
+import InputTag from 'vue-input-tag';
 
 export default {
   data(){
     return {
-      taskDescription:"##Lorem ipsum dolor sit amet\n **Consectetuer adipiscing elit. Aenean commodo ligula eget dolor**. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. *Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate*."
+      taskDescription:"##Lorem ipsum dolor sit amet\n **Consectetuer adipiscing elit. Aenean commodo ligula eget dolor**. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. *Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate*.",
+      tags:[]
     }
   },
   components: {
-    Datepicker
+    Datepicker,
+    InputTag
   },
   computed:{
     taskCode(){

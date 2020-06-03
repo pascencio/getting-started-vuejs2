@@ -10,45 +10,53 @@ module.exports = {
     },
     module: {
         rules: [{
-                test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    loaders: {
-                        plugins: [],
-                    }
-                    // other vue-loader options go here
+            test: /\.vue$/,
+            loader: 'vue-loader',
+            options: {
+                loaders: {
+                    plugins: [],
                 }
-            },
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/
-            },
-            {
-                test: /\.(png|jpg|gif|svg)$/,
-                loader: 'file-loader',
-                options: {
-                    name: '[name].[ext]?[hash]'
-                }
-            },
-            {
-                test: /\.css$/,
-                loader: 'style-loader!css-loader'
-            },
-            {
-                test: /\.(woff|woff2|eot|ttf|otf|svg)(\?.*$|$)/,
-                loader: 'url-loader?importLoaders=1&limit=100000'
-            },
-            {
-                test: /jquery(\/|\\)dist(\/|\\)jquery\.min\.js/,
-                use: [{
-                    loader: 'expose-loader',
-                    options: 'jQuery'
-                }, {
-                    loader: 'expose-loader',
-                    options: '$'
-                }]
+                // other vue-loader options go here
             }
+        },
+        {
+            test: /\.js$/,
+            loader: 'babel-loader',
+            exclude: /node_modules/
+        },
+        {
+            test: /\.(png|jpg|gif|svg)$/,
+            loader: 'file-loader',
+            options: {
+                name: '[name].[ext]?[hash]'
+            }
+        },
+        {
+            test: /\.scss$/,
+            loader: 'style-loader!css-loader!sass-loader'
+        },
+        {
+            test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+            use: [
+                {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                    }
+                }
+            ]
+        },
+        {
+            test: /jquery(\/|\\)dist(\/|\\)jquery\.min\.js/,
+            use: [{
+                loader: 'expose-loader',
+                options: 'jQuery'
+            }, {
+                loader: 'expose-loader',
+                options: '$'
+            }]
+        }
         ]
     },
     resolve: {
@@ -56,8 +64,8 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js'
         },
         modules: [
-          path.resolve('./src'),
-          path.resolve('./node_modules')
+            path.resolve('./src'),
+            path.resolve('./node_modules')
         ]
     },
     devServer: {

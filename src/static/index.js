@@ -1,7 +1,7 @@
-import 'font-awesome/css/font-awesome.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'assets/css/aileron.css';
-import 'assets/css/todo.css';
+import 'assets/scss/font-awesome.scss';
+import 'assets/scss/aileron.scss';
+import 'assets/scss/todo.scss';
+import 'assets/scss/bootstrap.scss';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
